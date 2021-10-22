@@ -5,7 +5,16 @@ body {
 
 
 /* 第一區 */
+.logo{
+margin-top: 45spx;
 
+
+}
+#class{
+margin-right: 200px
+
+
+}
 header {
     font-size: 20px;
     position: fixed;
@@ -16,56 +25,113 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 0px;
     background: rgb(253, 207, 0);
     opacity: 0.9;
 }
 
-header .nav a {
-    text-align: end;
-    font-size: 22px;
-    font-weight: normal;
-    color: rgb(33, 135, 202);
-    padding-left: 10px;
-    transition: 0.1s;
-}
-
-header .nav a:hover {
-    font-size: 22px;
-    font-weight: 900;
-    color: rgb(31, 151, 231);
-    margin-left: 10px;
-    transition: 0.5s;
-    background-color: white;
-    padding: 3px 3px 3px 3px;
-}
 
 #a-title {
     font-size: 50px;
-}
-
-nav {
-    left: 0px;
-    right: 0px;
-    padding: 10px;
 }
 
 #color {
     font-size: 25px;
 }
 
-#menu-bar {
-    font-size: 20px;
-    cursor: pointer;
-    color: gray;
-    border: 1px solid rgb(135, 135, 135);
-    border-radius: 5px;
-    padding: 8px;
-    display: none;
-}
-
 #conbook {
     transition: 0.5s;
+}
+
+
+/* 選單 */
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    padding: 0px;
+}
+
+ul {
+    list-style: none;
+}
+
+.menushow {
+display: none;
+}
+
+.menu li a:hover {
+    background: #517aaf;
+    color: #fff;
+    padding: 10px 15px 10px 15px;
+}
+
+.menu li a {
+    display: block;
+    color: #62a0ca;
+    padding: 5px 10px;
+    text-decoration: none;
+    transition: all .3s;
+}
+
+
+
+/* 下拉式選單 */
+
+@media(max-width: 806px) {
+    #class{
+        margin-right: 0px
+        
+        
+        }
+    /* 固定表頭，記得設定寬度 100% */
+    .header {
+        position: fixed;
+        width: 100%;
+        background: #0F222B;
+    }
+    .menu {
+        /* 隱藏選單 */
+        max-height: 0px;
+        overflow: hidden;
+        /* 取消 display: flex; */
+        display: block;
+        /* 設定絕對定位 */
+        position: absolute;
+        top: 81px;
+        /* 選單滿版呈現，也可以設定 left:0; right:0; */
+        width: 100%;
+        text-align: center;
+        background: #ffffff;
+        transition: max-height .8s;
+    }
+    /* .menu li {
+        /* border: 1px dashed #62a0ca; 
+        
+    } */
+    .menu li a {
+        transition: all .3s;
+    }
+    .menu li a:hover {
+        background: rgba(177, 177, 177, 0.753);
+        color: #517aaf;
+    }
+    .menushow {
+        display: block;
+        color: #62a0ca;
+        padding: 1em;
+        text-decoration: none;
+    }
+    .menu-show .menu {
+        max-height: 500px;
+    }
+    /* 將內容往下推，不要跟表頭重疊 */
+    .content {
+        padding-top: 90px;
+        ;
+    }
 }
 
 
@@ -131,7 +197,7 @@ a {
     width: 100px;
 }
 
-.img img {
+.img1 {
     margin-left: 5%;
     text-align: center;
     width: 90%;
@@ -158,38 +224,15 @@ a {
 /* RWD手機版 */
 
 @media (max-width:600px) {
-    #menu-bar {
-        display: initial;
-        position: absolute;
-        right: 10px;
-        top: 20px;
+    #a-title{
+            font-size: 40px;
+
+
     }
-    header .nav {
-        position: absolute;
-        top: 80px;
-        left: 0;
-        right: 0;
-        background-color: rgb(255, 208, 0);
-        border-top: 3px solid gray;
-        /* 隱藏下拉選單 */
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    }
-    header .nav.active {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-        padding: 10px;
-        /* font-size:26px; */
-    }
-    header .nav a {
-        /* 疊起來 */
-        display: block;
-        font-size: 22px;
-        font-weight: normal;
-        color: rgb(20, 80, 80);
-        margin: 10px;
-        padding: 6px;
-        /* padding:10px; */
-        /* border:0.1px solid rgb(189, 189, 189); */
-        border-left: 3px solid gray;
-        background-color: white;
-    }
+.img1{
+    width: 89%;
+ text-align: center;
+
+}
+
 }
