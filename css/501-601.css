@@ -1,0 +1,195 @@
+body {
+    background: rgb(194, 246, 6);
+    background: linear-gradient(90deg, rgba(194, 246, 6, 1) 0%, rgba(226, 221, 61, 1) 50%, rgba(148, 223, 201, 1) 100%, rgba(0, 212, 255, 1) 100%);
+}
+
+
+/* 第一區 */
+
+header {
+    font-size: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: rgb(253, 207, 0);
+    opacity: 0.9;
+}
+
+header .nav a {
+    text-align: end;
+    font-size: 22px;
+    font-weight: normal;
+    color: rgb(33, 135, 202);
+    padding-left: 10px;
+    transition: 0.1s;
+}
+
+header .nav a:hover {
+    font-size: 22px;
+    font-weight: 900;
+    color: rgb(31, 151, 231);
+    margin-left: 10px;
+    transition: 0.5s;
+    background-color: white;
+    padding: 3px 3px 3px 3px;
+}
+
+#a-title {
+    font-size: 50px;
+}
+
+nav {
+    left: 0px;
+    right: 0px;
+    padding: 10px;
+}
+
+#color {
+    font-size: 25px;
+}
+
+#menu-bar {
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    border: 1px solid rgb(135, 135, 135);
+    border-radius: 5px;
+    padding: 8px;
+    display: none;
+}
+
+#conbook {
+    transition: 0.5s;
+}
+
+
+/* 第一區 end */
+
+
+/* 第二區 */
+
+.note {
+    background-color: #000000;
+    color: white;
+    font-weight: bold;
+    padding: 0px;
+}
+
+
+/* 原本顏色 */
+
+a:visited {
+    color: rgba(0, 0, 0, 0.473);
+}
+
+
+/* 碰到顏色 */
+
+a:hover {
+    color: rgb(36, 183, 194);
+}
+
+
+/* 按下顏色 */
+
+a:active {
+    color: blue;
+}
+
+a {
+    text-decoration: none;
+}
+
+.d11 {
+    text-decoration: none;
+    color: #1e23258e;
+    background-color: rgba(85, 210, 219, 0.473);
+    padding: 20px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.d1 {
+    text-decoration: none;
+    color: #1e2325;
+    padding: 0 10px;
+}
+
+.d1:hover {
+    color: #51bcff;
+    padding: 0 10px;
+}
+
+#btu {
+    background-color: #87CEFA;
+    width: 100px;
+}
+
+.img img {
+    margin-left: 5%;
+    text-align: center;
+    width: 90%;
+    height: 500px;
+}
+
+#un {
+    bottom: 0;
+    background-color: #fadf87;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+}
+
+#full {
+    text-align: center;
+}
+
+#n1 {
+    font-size: 45px;
+}
+
+
+/* RWD手機版 */
+
+@media (max-width:600px) {
+    #menu-bar {
+        display: initial;
+        position: absolute;
+        right: 10px;
+        top: 20px;
+    }
+    header .nav {
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 208, 0);
+        border-top: 3px solid gray;
+        /* 隱藏下拉選單 */
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .nav.active {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        padding: 10px;
+        /* font-size:26px; */
+    }
+    header .nav a {
+        /* 疊起來 */
+        display: block;
+        font-size: 22px;
+        font-weight: normal;
+        color: rgb(20, 80, 80);
+        margin: 10px;
+        padding: 6px;
+        /* padding:10px; */
+        /* border:0.1px solid rgb(189, 189, 189); */
+        border-left: 3px solid gray;
+        background-color: white;
+    }
+}

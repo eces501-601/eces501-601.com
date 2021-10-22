@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="Google Chrome">
+    <meta http-equiv="X-UA-Compatible" content="Mozilla Firefox">
+    <link rel="icon" type="img/png" href="501.png">
+    <title>老師查詢</title>
+</head>
+<style>
+ body{
+    background-color: #87CEFA;
+} 
+#select{
+width: 100%;
+font-size: 20px;
+color: #ffffff;
+background-color: #11cae2;
+
+}
+.drit{
+    display: grid;
+    grid-template-areas: 
+    'i1 i6'
+    'i2 i6'
+    'i3 i6'
+    'i4 i6'
+    'i5 i6'
+    'i7 i6'
+    'i8 i6'
+    ;
+    grid-column-gap:10px;
+    grid-row-gap:10px;
+
+}
+.css{
+    font-size: 20px;
+    color: #fff;
+     padding: 30px;
+   
+
+} 
+.i1{
+    grid-area: i1;
+    background-color: #366481;
+}
+.i2{
+    grid-area: i2;
+    background-color: #5a99c0;
+}
+
+.i3{
+    grid-area: i3;
+    background-color: #7ae731;
+}
+
+.i4{
+    grid-area: i4;
+    background-color: #e46612;
+}
+
+.i5{
+    grid-area: i5;
+    background-color: #bd87fa;
+}
+
+.i6{
+    grid-area: i6;
+    background-color: #b6c20a;
+}
+
+.i7{
+    grid-area: i7;
+    background-color: #a810ad;
+}
+
+.i8{
+    grid-area: i8;
+    background-color: #e23939b9;
+}
+
+@media (max-width: 800px){
+.drit{
+    display: grid;
+    grid-template-areas: 
+    'i6'
+    'i1'
+    'i2 '
+    'i3 '
+    'i4 '
+    'i5 '
+    'i7 '
+    'i8 ';
+    grid-column-gap:5px;
+    grid-row-gap:5px;
+
+
+}
+
+
+}
+
+</style>
+<body onload="myFunction">
+    <select id="select" onchange="myFunction">
+        <optgroup label="班級導師">
+          <option value="teacher.json">洪潁安老師</option>
+        </optgroup>
+        <optgroup label="科任老師">
+            <option value="nature.json">謝國基老師(自然)</option>
+            <option value="society.json">許施靜老師(社會)</option>
+            <option value="english.json">蘇立瑋老師(英文)</option>
+            <option value="music.json">張簡憶華老師(音樂)</option>
+            <option value="comprehensive.json">王湘麟老師</option>
+            <option value="computer.json">康錦程老師(電腦)</option>
+        </optgroup>
+      </select>
+      <br>
+      <br>
+      <div class="drit">
+      <div id="name" class="i1 css">1</div>
+      <div id="phone" class="i2 css">2</div>
+      <div id="classphone" class="i3 css">3</div>
+      <div id="bg" class="i4 css">4</div>
+      <div id="email" class="i5 css">5</div>
+      <div id="img1" class="i6 css">
+          6
+          <img id="img" src="">
+      </div>
+      <div id="class" class="i7 css">7</div>
+      <div id="class1" class="i8 css">8</div>
+      </div>
+</body>
+<script>
+    //抓資料
+    function myFunction() {
+        var x = document.getElementById("select").value;
+        var link = "https://tangperry.github.io/teacherapi/teacher.";
+
+        fetch(link)
+
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data);
+               
+                document.getElementById("name").innerHTML = "名字";
+                document.getElementById("phone").innerHTML = data.phone;
+                document.getElementById("classphone").innerHTML = data.classphone;
+                document.getElementById("bg").innerHTML = data.gb;
+                document.getElementById("email").innerHTML = data.email;
+                document.getElementById("img").src=data.img;
+                document.getElementById("class").innerHTML = data.class;
+                document.getElementById("class1").innerHTML = data.class1;
+                
+            });
+
+    }
+
+
+</script>
+</html>

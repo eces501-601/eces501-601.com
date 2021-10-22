@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(255, 255, 255);
+    }
+.fc-dom-1{
+
+color: rgb(6, 233, 233);
+ font-size: 50px; 
+
+}
+
+    .calendar {
+    width: 700px;
+    height: 600px;
+    /* 置中 */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid gray;
+    box-shadow: 5px 10px 7px gray;
+    padding: 20px;
+    background-color: white;
+    }
+    
+    .fc .fc-toolbar-title {
+    color: brown;
+    font-size: 40px;
+    }
+    
+    
+    @media (max-width:600px) {
+    .container {
+    width: 370px;
+    height: 600px;
+    }
+    .fc th {
+    color: blue;
+    font-size: 18px;
+    }
+    .fc .fc-toolbar-title {
+    color: brown;
+    font-size: 20px;
+    }
+    .fc-toolbar-chunk{
+
+        font-size: 12px;
+    }
+    } 

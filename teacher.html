@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="Google Chrome">
+    <meta http-equiv="X-UA-Compatible" content="Mozilla Firefox">
+    <link rel="icon" type="img/png" href="501.png">
+    <title>老師查詢</title>
+</head>
+<style>
+ body{
+    background-color: #87CEFA;
+} 
+#link{
+font-size: 100px;
+text-align: center;
+color: #ffffff;
+}
+.select{
+width: 100%;
+font-size: 20px;
+color: #ffffff;
+background-color: #11cae2;
+}
+.select:focus{
+width: 100%;
+font-size: 20px;
+color: #ffffff;
+background-color: #11cae2;
+border: #facc00 5px solid;
+opacity: 5s;
+}
+.css{
+
+font-size: 100px;
+
+}
+
+@media (max-width: 800px){
+
+    #link{
+
+        font-size: 50px;
+    }
+}
+
+</style>
+<body onload="myFunction">
+    <select class="select" onchange="myFunction">
+        <option value="" selected>請選擇老師</option>
+        <optgroup label="班級導師">
+          <option value="teacher.json">洪潁安老師</option>
+        </optgroup>
+        <optgroup label="科任老師">
+            <option value="nature.json">謝國基老師(自然)</option>
+            <option value="society.json">許施靜老師(社會)</option>
+            <option value="english.json">蘇立瑋老師(英文)</option>
+            <option value="music.json">張簡憶華老師(音樂)</option>
+            <option value="comprehensive.json">王湘麟老師</option>
+            <option value="computer.json">康錦程老師(電腦)</option>
+        </optgroup>
+      </select>
+      <div class="css"><a id="link" href="#">後續製作中</a></div>
+     
+</body>
+<script>
+    //抓資料
+    function myFunction() {}
+
+</script>
+</html>
